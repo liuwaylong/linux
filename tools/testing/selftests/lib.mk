@@ -1,6 +1,6 @@
 # This mimics the top-level Makefile. We do it explicitly here so that this
 # Makefile can operate with or without the kbuild infrastructure.
-CC := $(CROSS_COMPILE)gcc
+CC ?= $(CROSS_COMPILE)gcc
 
 ifeq (0,$(MAKELEVEL))
 OUTPUT := $(shell pwd)
